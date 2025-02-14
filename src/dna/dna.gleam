@@ -6,7 +6,7 @@ import gleam/string
 import simplifile
 
 pub fn solution() {
-  let assert Ok(data) = simplifile.read("./rosalind_dna.txt")
+  let assert Ok(data) = simplifile.read("src/dna/rosalind_dna.txt")
   let counts =
     string.to_graphemes(data)
     |> list.fold(dict.new(), fn(counts, nt) {
