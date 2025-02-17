@@ -1,18 +1,8 @@
 import argv
-import dna/dna
 import gleam/dict
 import gleam/io
 import gleam/list
-
-const solution_reference: List(#(SolutionCode, fn() -> Solution)) = [
-  #("dna", dna.solution),
-]
-
-type SolutionCode =
-  String
-
-type Solution =
-  String
+import solution_reference.{type Solution, type SolutionCode, solution_reference}
 
 type SolutionError {
   InvalidSolutionCode(code: String)
